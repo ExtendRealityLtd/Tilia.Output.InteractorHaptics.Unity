@@ -1,20 +1,22 @@
 {
-    "name": "io.extendreality.tilia.{scope}.{feature}.{platform?}",
-    "displayName": "Tilia {scope}.{feature}.{platform?}",
-    "description": "{Description of feature.}",
+    "name": "io.extendreality.tilia.output.interactorhaptics.unity",
+    "displayName": "Tilia Output InteractorHaptics Unity",
+    "description": "Provides the ability to initiate haptic feedback on the controllers connected to an interactor for the Unity software.",
     "version": "1.0.0",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
-        "pattern"
+        "output",
+        "haptics",
+        "feedback"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/",
     "bugs": {
-        "url": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/issues"
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/issues"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.git"
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity.git"
     },
     "license": "MIT",
     "author": {
@@ -23,7 +25,9 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "X.Y.Z"
+        "io.extendreality.zinnia.unity": "1.31.1",
+        "io.extendreality.tilia.camerarigs.trackedalias.unity": "1.5.9",
+        "io.extendreality.tilia.interactions.interactables.unity": "1.15.10"
     },
     "files": [
         "*.md",
@@ -31,6 +35,7 @@
         "*.asmdef",
         "*.xml",
         "Documentation",
-        "Runtime"
+        "Runtime",
+        "docfx.json"
     ]
 }
