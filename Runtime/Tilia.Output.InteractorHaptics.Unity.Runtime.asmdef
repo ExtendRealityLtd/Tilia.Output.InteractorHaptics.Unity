@@ -1,0 +1,24 @@
+{
+    "name": "Tilia.Output.InteractorHaptics.Unity.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:23756adb8cb36e64587322ad0ecdf5e3",
+        "GUID:c1025f99d610bc44e9ca550377fec692",
+        "GUID:aa53792fb241caf4dbb778e217642557"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Malimbe.BehaviourStateRequirementMethod.dll",
+        "Malimbe.MemberChangeMethod.dll",
+        "Malimbe.MemberClearanceMethod.dll",
+        "Malimbe.PropertySerializationAttribute.dll",
+        "Malimbe.XmlDocumentationAttribute.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
