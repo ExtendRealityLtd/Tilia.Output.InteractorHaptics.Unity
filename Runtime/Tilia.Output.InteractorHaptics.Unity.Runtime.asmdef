@@ -1,11 +1,11 @@
 {
     "name": "Tilia.Output.InteractorHaptics.Unity.Runtime",
-    "rootNamespace": "",
     "references": [
-        "GUID:23756adb8cb36e64587322ad0ecdf5e3",
-        "GUID:c1025f99d610bc44e9ca550377fec692",
-        "GUID:aa53792fb241caf4dbb778e217642557"
+        "Zinnia.Runtime",
+        "Tilia.CameraRigs.TrackedAlias.Unity.Runtime",
+        "Tilia.Interactions.Interactables.Unity.Runtime"
     ],
+    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -18,7 +18,5 @@
         "Malimbe.XmlDocumentationAttribute.dll"
     ],
     "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+    "defineConstraints": []
 }
