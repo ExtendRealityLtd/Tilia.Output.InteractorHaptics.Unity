@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.0.3](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.0.2...v1.0.3) (2021-03-29)
+
+#### Bug Fixes
+
+* **asmdef:** change asmdef to Unity 2018.3 format ([39f3a27](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/39f3a27156bd0942be09700bb6fb928d35ac48fe))
+  > The asmdef file was created in a newer version of Unity where the format is different, which will cause errors if this repo is used in an earlier version of Unity where the new format is not supported.
+  > 
+  > This format will be auto updated to the new format by Unity.
+
 ### [1.0.2](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.0.1...v1.0.2) (2021-03-29)
 
 #### Miscellaneous Chores
