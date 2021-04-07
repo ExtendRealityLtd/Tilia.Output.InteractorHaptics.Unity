@@ -26,7 +26,7 @@
     },
     "dependencies": {
         "io.extendreality.zinnia.unity": "1.34.1",
-        "io.extendreality.tilia.camerarigs.trackedalias.unity": "1.5.10",
+        "io.extendreality.tilia.camerarigs.trackedalias.unity": "1.6.0",
         "io.extendreality.tilia.interactions.interactables.unity": "1.16.2"
     },
     "files": [
