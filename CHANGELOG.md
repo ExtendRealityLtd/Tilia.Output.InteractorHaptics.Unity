@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.0.6...v1.1.0) (2021-04-07)
+
+#### Features
+
+* **Utility:** add prefab creator ([b766722](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/b766722b8ad03c83123d0b42c225594668b4bd54))
+  > The latest version of Zinnia has the basis of a prefab creator that can be used to enable easy adding of prefabs to a scene without needing to drag and drop from directories. Instead a new menu item is added for quickly adding prefabs. The guide has been updated to accommodate this and the FodyWeavers.xml is now located in the root to serve both the Runtime and Editor scripts.
+
+#### Bug Fixes
+
+* **package.json:** add missing reference to Editor directory ([4871c17](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/4871c17d23d8b457f89e3bdffb2a12cc38af4b60))
+  > The build will fail without referencing this new Editor directory so it has now been added to the package.
+
 ### [1.0.6](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.0.5...v1.0.6) (2021-04-01)
 
 #### Miscellaneous Chores
