@@ -7,7 +7,7 @@ namespace Tilia.Output.InteractorHaptics.Utility
     public class PrefabCreator : BasePrefabCreator
     {
         private const string group = "Tilia/";
-        private const string project = "Output/";
+        private const string project = "Interactions/Output/";
         private const string menuItemRoot = topLevelMenuLocation + group + subLevelMenuLocation + project;
 
         private const string package = "io.extendreality.tilia.output.interactorhaptics.unity";

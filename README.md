@@ -9,7 +9,7 @@
 
 ## Introduction
 
-The InteractorHaptics prefab provides a quick and easy mechanism for performing haptic feedback on physical controllers assocaited with the Interactors.
+The InteractorHaptics prefab provides a quick and easy mechanism for performing haptic feedback on physical controllers associated with the Interactors.
 
 > **Requires** the Unity software version `2018.3.10f1` (or above).
 
