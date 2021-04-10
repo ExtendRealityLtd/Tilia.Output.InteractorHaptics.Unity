@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.1.3](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.2...v1.1.3) (2021-04-10)
+
+#### Bug Fixes
+
+* **structure:** move scripts to correct directory ([2915fa2](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/2915fa2e851ed25112f9ee42c3749a27cc0fdda0))
+  > The scripts were in the wrong directory and have now been moved into a `Scripts` directory.
+  > 
+  > The prefab creator has also been moved into the `Interactions` menu structure.
+
 ### [1.1.2](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.1...v1.1.2) (2021-04-07)
 
 #### Miscellaneous Chores
