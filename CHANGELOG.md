@@ -1,5 +1,16 @@
 # Changelog
 
+### [1.1.11](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.10...v1.1.11) (2021-05-14)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([fa1d308](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/fa1d30868bf95171e544cb7cc7bcddf820c82834))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 1.18.0 to 1.19.0. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v1.18.0...v1.19.0)
+  > 
+  > Signed-off-by: dependabot[bot] <support@github.com>
+* **README.md:** update title logo to related-media repo ([630187f](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/630187f91fbda0ba293c00a51c17cb238c653bc6))
+  > The title logo is now located on the related-media repo.
+
 ### [1.1.10](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.9...v1.1.10) (2021-05-10)
 
 #### Miscellaneous Chores
