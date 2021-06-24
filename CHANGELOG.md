@@ -1,5 +1,16 @@
 # Changelog
 
+### [1.1.17](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.16...v1.1.17) (2021-06-24)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.camerarigs.trackedalias.unity ([9dfcba5](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/9dfcba5f9d923a2cec62dc2746e4ca1f5904338f))
+  > Bumps [io.extendreality.tilia.camerarigs.trackedalias.unity](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity) from 1.6.4 to 1.6.5. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/compare/v1.6.4...v1.6.5)
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([e84ef06](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/e84ef069600c021b1f07e2d9b0f1f4ec42fae588))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 1.19.2 to 1.19.3. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v1.19.2...v1.19.3)
+* **deps:** bump io.extendreality.zinnia.unity from 1.36.2 to 1.37.0 ([283b12e](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/283b12e2613e461123b1f5aff42ac29f3840444b))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.36.2 to 1.37.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.36.2...v1.37.0)
+
 ### [1.1.16](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.15...v1.1.16) (2021-06-19)
 
 #### Miscellaneous Chores
