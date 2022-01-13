@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.38](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.37...v1.1.38) (2022-01-13)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.41.0 to 1.42.0 ([b099741](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/b09974167149abbd58b2b7bfc5c9f5643f8dc95d))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.41.0 to 1.42.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.41.0...v1.42.0)
+
 ### [1.1.37](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.36...v1.1.37) (2022-01-12)
 
 #### Miscellaneous Chores
