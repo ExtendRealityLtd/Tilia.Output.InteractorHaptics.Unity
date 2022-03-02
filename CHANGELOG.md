@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.54...v1.2.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([a44ad44](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/a44ad44c4c83a31c3fbcec59236472fb09db91c2))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.1.54](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v1.1.53...v1.1.54) (2022-02-14)
 
 #### Miscellaneous Chores
