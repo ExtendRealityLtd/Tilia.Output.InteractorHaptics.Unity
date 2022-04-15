@@ -19,6 +19,9 @@ The public interface into the Interactor Haptics Prefab.
   * [CancelHaptics(GameObject)]
   * [CancelHaptics(InteractorFacade)]
   * [CancelHaptics(XRNode)]
+  * [ClearLeftInteractor()]
+  * [ClearRightInteractor()]
+  * [ClearTrackedAlias()]
   * [OnAfterLeftInteractorChange()]
   * [OnAfterRightInteractorChange()]
   * [PerformDefaultHaptics(GameObject)]
@@ -167,6 +170,36 @@ public virtual void CancelHaptics(XRNode node)
 | --- | --- | --- |
 | XRNode | node | The node associated with the Interactor to cancel the haptics on. |
 
+#### ClearLeftInteractor()
+
+Clears [LeftInteractor].
+
+##### Declaration
+
+```
+public virtual void ClearLeftInteractor()
+```
+
+#### ClearRightInteractor()
+
+Clears [RightInteractor].
+
+##### Declaration
+
+```
+public virtual void ClearRightInteractor()
+```
+
+#### ClearTrackedAlias()
+
+Clears [TrackedAlias].
+
+##### Declaration
+
+```
+public virtual void ClearTrackedAlias()
+```
+
 #### OnAfterLeftInteractorChange()
 
 Called after [LeftInteractor] has been changed.
@@ -287,6 +320,9 @@ public virtual void PerformProfileHaptics(XRNode node)
 [InteractorHapticsConfigurator]: InteractorHapticsConfigurator.md
 [LeftInteractor]: InteractorHapticsFacade.md#LeftInteractor
 [RightInteractor]: InteractorHapticsFacade.md#RightInteractor
+[TrackedAlias]: InteractorHapticsFacade.md#TrackedAlias
+[LeftInteractor]: InteractorHapticsFacade.md#LeftInteractor
+[RightInteractor]: InteractorHapticsFacade.md#RightInteractor
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
@@ -302,6 +338,9 @@ public virtual void PerformProfileHaptics(XRNode node)
 [CancelHaptics(GameObject)]: #CancelHapticsGameObject
 [CancelHaptics(InteractorFacade)]: #CancelHapticsInteractorFacade
 [CancelHaptics(XRNode)]: #CancelHapticsXRNode
+[ClearLeftInteractor()]: #ClearLeftInteractor
+[ClearRightInteractor()]: #ClearRightInteractor
+[ClearTrackedAlias()]: #ClearTrackedAlias
 [OnAfterLeftInteractorChange()]: #OnAfterLeftInteractorChange
 [OnAfterRightInteractorChange()]: #OnAfterRightInteractorChange
 [PerformDefaultHaptics(GameObject)]: #PerformDefaultHapticsGameObject
