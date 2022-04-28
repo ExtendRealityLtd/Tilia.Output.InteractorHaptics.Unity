@@ -1,7 +1,5 @@
 namespace Tilia.Output.InteractorHaptics
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using Tilia.Interactions.Interactables.Interactors;
     using UnityEngine;
     using Zinnia.Data.Attribute;
@@ -14,51 +12,137 @@ namespace Tilia.Output.InteractorHaptics
     public class InteractorHapticsConfigurator : MonoBehaviour
     {
         #region Facade Settings
+        [Header("Facade Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private InteractorHapticsFacade facade;
         /// <summary>
         /// The public interface facade.
         /// </summary>
-        [Serialized]
-        [field: Header("Facade Settings"), DocumentedByXml, Restricted]
-        public InteractorHapticsFacade Facade { get; protected set; }
+        public InteractorHapticsFacade Facade
+        {
+            get
+            {
+                return facade;
+            }
+            protected set
+            {
+                facade = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The linked RulesMatcher.")]
+        [SerializeField]
+        [Restricted]
+        private RulesMatcher matcher;
         /// <summary>
         /// The linked <see cref="RulesMatcher"/>.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public RulesMatcher Matcher { get; protected set; }
+        public RulesMatcher Matcher
+        {
+            get
+            {
+                return matcher;
+            }
+            protected set
+            {
+                matcher = value;
+            }
+        }
+        [Tooltip("The linked ListContainsRule for the left controller.")]
+        [SerializeField]
+        [Restricted]
+        private ListContainsRule leftControllerRule;
         /// <summary>
         /// The linked <see cref="ListContainsRule"/> for the left controller.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ListContainsRule LeftControllerRule { get; protected set; }
+        public ListContainsRule LeftControllerRule
+        {
+            get
+            {
+                return leftControllerRule;
+            }
+            protected set
+            {
+                leftControllerRule = value;
+            }
+        }
+        [Tooltip("The linked ListContainsRule for the right controller.")]
+        [SerializeField]
+        [Restricted]
+        private ListContainsRule rightControllerRule;
         /// <summary>
         /// The linked <see cref="ListContainsRule"/> for the right controller.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public ListContainsRule RightControllerRule { get; protected set; }
+        public ListContainsRule RightControllerRule
+        {
+            get
+            {
+                return rightControllerRule;
+            }
+            protected set
+            {
+                rightControllerRule = value;
+            }
+        }
+        [Tooltip("The GameObject containing the default haptic processing logic.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject defaultHapticProcessors;
         /// <summary>
         /// The <see cref="GameObject"/> containing the default haptic processing logic.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject DefaultHapticProcessors { get; protected set; }
+        public GameObject DefaultHapticProcessors
+        {
+            get
+            {
+                return defaultHapticProcessors;
+            }
+            protected set
+            {
+                defaultHapticProcessors = value;
+            }
+        }
+        [Tooltip("The GameObject containing the profile haptic processing logic.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject profileHapticProcessors;
         /// <summary>
         /// The <see cref="GameObject"/> containing the profile haptic processing logic.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject ProfileHapticProcessors { get; protected set; }
+        public GameObject ProfileHapticProcessors
+        {
+            get
+            {
+                return profileHapticProcessors;
+            }
+            protected set
+            {
+                profileHapticProcessors = value;
+            }
+        }
+        [Tooltip("The GameObject containing the logic for canceling existing haptic processes.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject cancelHapticProcessors;
         /// <summary>
         /// The <see cref="GameObject"/> containing the logic for canceling existing haptic processes.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject CancelHapticProcessors { get; protected set; }
+        public GameObject CancelHapticProcessors
+        {
+            get
+            {
+                return cancelHapticProcessors;
+            }
+            protected set
+            {
+                cancelHapticProcessors = value;
+            }
+        }
         #endregion
 
         /// <summary>

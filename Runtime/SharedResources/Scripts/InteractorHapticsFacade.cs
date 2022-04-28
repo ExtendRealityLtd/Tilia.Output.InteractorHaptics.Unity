@@ -1,14 +1,11 @@
 namespace Tilia.Output.InteractorHaptics
 {
-    using Malimbe.MemberChangeMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using Tilia.CameraRigs.TrackedAlias;
     using Tilia.Interactions.Interactables.Interactors;
     using UnityEngine;
     using UnityEngine.XR;
     using Zinnia.Data.Attribute;
+    using Zinnia.Extension;
 
     /// <summary>
     /// The public interface into the Interactor Haptics Prefab.
@@ -16,49 +13,166 @@ namespace Tilia.Output.InteractorHaptics
     public class InteractorHapticsFacade : MonoBehaviour
     {
         #region Link Settings
+        [Header("Link Settings")]
+        [Tooltip("The linked TrackedAliasFacade.")]
+        [SerializeField]
+        private TrackedAliasFacade trackedAlias;
         /// <summary>
         /// The linked <see cref="TrackedAliasFacade"/>.
         /// </summary>
-        [Serialized, Cleared]
-        [field: Header("Link Settings"), DocumentedByXml]
-        public TrackedAliasFacade TrackedAlias { get; set; }
+        public TrackedAliasFacade TrackedAlias
+        {
+            get
+            {
+                return trackedAlias;
+            }
+            set
+            {
+                trackedAlias = value;
+            }
+        }
+        [Tooltip("The linked InteractorFacade to relate to the left controller.")]
+        [SerializeField]
+        private InteractorFacade leftInteractor;
         /// <summary>
         /// The linked <see cref="InteractorFacade"/> to relate to the left controller.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public InteractorFacade LeftInteractor { get; set; }
+        public InteractorFacade LeftInteractor
+        {
+            get
+            {
+                return leftInteractor;
+            }
+            set
+            {
+                leftInteractor = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterLeftInteractorChange();
+                }
+            }
+        }
+        [Tooltip("The linked InteractorFacade to relate to the right controller.")]
+        [SerializeField]
+        private InteractorFacade rightInteractor;
         /// <summary>
         /// The linked <see cref="InteractorFacade"/> to relate to the right controller.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public InteractorFacade RightInteractor { get; set; }
+        public InteractorFacade RightInteractor
+        {
+            get
+            {
+                return rightInteractor;
+            }
+            set
+            {
+                rightInteractor = value;
+                if (this.IsMemberChangeAllowed())
+                {
+                    OnAfterRightInteractorChange();
+                }
+            }
+        }
         #endregion
 
         #region Haptic Settings
+        [Header("Haptic Settings")]
+        [Tooltip("The intensity to produce the haptic output at for the current process.")]
+        [SerializeField]
+        private float intensity = 1f;
         /// <summary>
         /// The intensity to produce the haptic output at for the current process.
         /// </summary>
-        [Serialized]
-        [field: Header("Haptic Settings"), DocumentedByXml]
-        public float Intensity { get; set; } = 1f;
+        public float Intensity
+        {
+            get
+            {
+                return intensity;
+            }
+            set
+            {
+                intensity = value;
+            }
+        }
+        [Tooltip("The haptic profile to process.")]
+        [SerializeField]
+        private int profile;
         /// <summary>
         /// The haptic profile to process.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public int Profile { get; set; }
+        public int Profile
+        {
+            get
+            {
+                return profile;
+            }
+            set
+            {
+                profile = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The linked InteractorHapticsConfigurator.")]
+        [SerializeField]
+        [Restricted]
+        private InteractorHapticsConfigurator configuration;
         /// <summary>
         /// The linked <see cref="InteractorHapticsConfigurator"/>.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public InteractorHapticsConfigurator Configuration { get; protected set; }
+        public InteractorHapticsConfigurator Configuration
+        {
+            get
+            {
+                return configuration;
+            }
+            protected set
+            {
+                configuration = value;
+            }
+        }
         #endregion
+
+        /// <summary>
+        /// Clears <see cref="TrackedAlias"/>.
+        /// </summary>
+        public virtual void ClearTrackedAlias()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            TrackedAlias = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="LeftInteractor"/>.
+        /// </summary>
+        public virtual void ClearLeftInteractor()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            LeftInteractor = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="RightInteractor"/>.
+        /// </summary>
+        public virtual void ClearRightInteractor()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            RightInteractor = default;
+        }
 
         /// <summary>
         /// Performs the haptics process on the default haptic process associated with the given Interactor.
@@ -177,7 +291,6 @@ namespace Tilia.Output.InteractorHaptics
         /// <summary>
         /// Called after <see cref="LeftInteractor"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(LeftInteractor))]
         protected virtual void OnAfterLeftInteractorChange()
         {
             Configuration.ConfigureLeftControllerRules();
@@ -186,7 +299,6 @@ namespace Tilia.Output.InteractorHaptics
         /// <summary>
         /// Called after <see cref="RightInteractor"/> has been changed.
         /// </summary>
-        [CalledAfterChangeOf(nameof(RightInteractor))]
         protected virtual void OnAfterRightInteractorChange()
         {
             Configuration.ConfigureRightControllerRules();
