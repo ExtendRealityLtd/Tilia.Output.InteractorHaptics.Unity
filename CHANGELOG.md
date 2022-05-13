@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.11](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.0.10...v2.0.11) (2022-05-13)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.interactions.interactables.unity ([833605e](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/833605e5ca36f972bed71f664e6ea46bd434524f))
+  > Bumps [io.extendreality.tilia.interactions.interactables.unity](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity) from 2.2.0 to 2.3.0. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Interactions.Interactables.Unity/compare/v2.2.0...v2.3.0)
+
 ### [2.0.10](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.0.9...v2.0.10) (2022-05-09)
 
 #### Miscellaneous Chores
