@@ -79,6 +79,7 @@ namespace Tilia.Output.InteractorHaptics
         [Header("Haptic Settings")]
         [Tooltip("The intensity to produce the haptic output at for the current process.")]
         [SerializeField]
+        [Range(0f, 1f)]
         private float intensity = 1f;
         /// <summary>
         /// The intensity to produce the haptic output at for the current process.
@@ -115,6 +116,26 @@ namespace Tilia.Output.InteractorHaptics
 
         #region Reference Settings
         [Header("Reference Settings")]
+        [Tooltip("The InteractorFacade that has been queued up to perform haptics on in the future.")]
+        [SerializeField]
+        private InteractorFacade queuedInteractor;
+        /// <summary>
+        /// The <see cref="InteractorFacade"/> that has been queued up to perform haptics on in the future.
+        /// </summary>
+        public InteractorFacade QueuedInteractor
+        {
+            get
+            {
+                return queuedInteractor;
+            }
+            set
+            {
+                queuedInteractor = value;
+
+            }
+        }
+
+
         [Tooltip("The linked InteractorHapticsConfigurator.")]
         [SerializeField]
         [Restricted]
@@ -175,6 +196,33 @@ namespace Tilia.Output.InteractorHaptics
         }
 
         /// <summary>
+        /// Clears <see cref="QueuedInteractor"/>.
+        /// </summary>
+        public virtual void ClearQueuedInteractor()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            CancelHapticsOnQueued();
+            QueuedInteractor = default;
+        }
+
+        /// <summary>
+        /// Performs the haptics process on the default haptic process associated with the queued Interactor.
+        /// </summary>
+        public virtual void PerformDefaultHapticsOnQueued()
+        {
+            if (QueuedInteractor == null)
+            {
+                return;
+            }
+
+            PerformDefaultHaptics(QueuedInteractor);
+        }
+
+        /// <summary>
         /// Performs the haptics process on the default haptic process associated with the given Interactor.
         /// </summary>
         /// <param name="interactor">The Interactor to process the haptics for.</param>
@@ -210,6 +258,19 @@ namespace Tilia.Output.InteractorHaptics
         }
 
         /// <summary>
+        /// Performs the haptics process on the specified haptic profile associated with the queued Interactor.
+        /// </summary>
+        public virtual void PerformProfileHapticsOnQueued()
+        {
+            if (QueuedInteractor == null)
+            {
+                return;
+            }
+
+            PerformProfileHaptics(QueuedInteractor);
+        }
+
+        /// <summary>
         /// Performs the haptics process on the specified haptic profile associated with the given Interactor.
         /// </summary>
         /// <param name="interactor">The Interactor to process the haptics for.</param>
@@ -242,6 +303,19 @@ namespace Tilia.Output.InteractorHaptics
                     Configuration.BeginProfileHapticsOnRightController();
                     break;
             }
+        }
+
+        /// <summary>
+        /// Cancels all haptic processes associated with the queued Interactor.
+        /// </summary>
+        public virtual void CancelHapticsOnQueued()
+        {
+            if (QueuedInteractor == null)
+            {
+                return;
+            }
+
+            CancelHaptics(QueuedInteractor);
         }
 
         /// <summary>

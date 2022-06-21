@@ -12,6 +12,7 @@ The public interface into the Interactor Haptics Prefab.
   * [Intensity]
   * [LeftInteractor]
   * [Profile]
+  * [QueuedInteractor]
   * [RightInteractor]
   * [TrackedAlias]
 * [Methods]
@@ -19,7 +20,9 @@ The public interface into the Interactor Haptics Prefab.
   * [CancelHaptics(GameObject)]
   * [CancelHaptics(InteractorFacade)]
   * [CancelHaptics(XRNode)]
+  * [CancelHapticsOnQueued()]
   * [ClearLeftInteractor()]
+  * [ClearQueuedInteractor()]
   * [ClearRightInteractor()]
   * [ClearTrackedAlias()]
   * [OnAfterLeftInteractorChange()]
@@ -27,9 +30,11 @@ The public interface into the Interactor Haptics Prefab.
   * [PerformDefaultHaptics(GameObject)]
   * [PerformDefaultHaptics(InteractorFacade)]
   * [PerformDefaultHaptics(XRNode)]
+  * [PerformDefaultHapticsOnQueued()]
   * [PerformProfileHaptics(GameObject)]
   * [PerformProfileHaptics(InteractorFacade)]
   * [PerformProfileHaptics(XRNode)]
+  * [PerformProfileHapticsOnQueued()]
 
 ## Details
 
@@ -88,6 +93,16 @@ The haptic profile to process.
 
 ```
 public int Profile { get; set; }
+```
+
+#### QueuedInteractor
+
+The InteractorFacade that has been queued up to perform haptics on in the future.
+
+##### Declaration
+
+```
+public InteractorFacade QueuedInteractor { get; set; }
 ```
 
 #### RightInteractor
@@ -170,6 +185,16 @@ public virtual void CancelHaptics(XRNode node)
 | --- | --- | --- |
 | XRNode | node | The node associated with the Interactor to cancel the haptics on. |
 
+#### CancelHapticsOnQueued()
+
+Cancels all haptic processes associated with the queued Interactor.
+
+##### Declaration
+
+```
+public virtual void CancelHapticsOnQueued()
+```
+
 #### ClearLeftInteractor()
 
 Clears [LeftInteractor].
@@ -178,6 +203,16 @@ Clears [LeftInteractor].
 
 ```
 public virtual void ClearLeftInteractor()
+```
+
+#### ClearQueuedInteractor()
+
+Clears [QueuedInteractor].
+
+##### Declaration
+
+```
+public virtual void ClearQueuedInteractor()
 ```
 
 #### ClearRightInteractor()
@@ -268,6 +303,16 @@ public virtual void PerformDefaultHaptics(XRNode node)
 | --- | --- | --- |
 | XRNode | node | The node associated with the Interactor to process the haptics for. |
 
+#### PerformDefaultHapticsOnQueued()
+
+Performs the haptics process on the default haptic process associated with the queued Interactor.
+
+##### Declaration
+
+```
+public virtual void PerformDefaultHapticsOnQueued()
+```
+
 #### PerformProfileHaptics(GameObject)
 
 Performs the haptics process on the specified haptic profile associated with the given Interactor GameObject.
@@ -316,9 +361,20 @@ public virtual void PerformProfileHaptics(XRNode node)
 | --- | --- | --- |
 | XRNode | node | The node associated with the Interactor to process the haptics for. |
 
+#### PerformProfileHapticsOnQueued()
+
+Performs the haptics process on the specified haptic profile associated with the queued Interactor.
+
+##### Declaration
+
+```
+public virtual void PerformProfileHapticsOnQueued()
+```
+
 [Tilia.Output.InteractorHaptics]: README.md
 [InteractorHapticsConfigurator]: InteractorHapticsConfigurator.md
 [LeftInteractor]: InteractorHapticsFacade.md#LeftInteractor
+[QueuedInteractor]: InteractorHapticsFacade.md#QueuedInteractor
 [RightInteractor]: InteractorHapticsFacade.md#RightInteractor
 [TrackedAlias]: InteractorHapticsFacade.md#TrackedAlias
 [LeftInteractor]: InteractorHapticsFacade.md#LeftInteractor
@@ -331,6 +387,7 @@ public virtual void PerformProfileHaptics(XRNode node)
 [Intensity]: #Intensity
 [LeftInteractor]: #LeftInteractor
 [Profile]: #Profile
+[QueuedInteractor]: #QueuedInteractor
 [RightInteractor]: #RightInteractor
 [TrackedAlias]: #TrackedAlias
 [Methods]: #Methods
@@ -338,7 +395,9 @@ public virtual void PerformProfileHaptics(XRNode node)
 [CancelHaptics(GameObject)]: #CancelHapticsGameObject
 [CancelHaptics(InteractorFacade)]: #CancelHapticsInteractorFacade
 [CancelHaptics(XRNode)]: #CancelHapticsXRNode
+[CancelHapticsOnQueued()]: #CancelHapticsOnQueued
 [ClearLeftInteractor()]: #ClearLeftInteractor
+[ClearQueuedInteractor()]: #ClearQueuedInteractor
 [ClearRightInteractor()]: #ClearRightInteractor
 [ClearTrackedAlias()]: #ClearTrackedAlias
 [OnAfterLeftInteractorChange()]: #OnAfterLeftInteractorChange
@@ -346,6 +405,8 @@ public virtual void PerformProfileHaptics(XRNode node)
 [PerformDefaultHaptics(GameObject)]: #PerformDefaultHapticsGameObject
 [PerformDefaultHaptics(InteractorFacade)]: #PerformDefaultHapticsInteractorFacade
 [PerformDefaultHaptics(XRNode)]: #PerformDefaultHapticsXRNode
+[PerformDefaultHapticsOnQueued()]: #PerformDefaultHapticsOnQueued
 [PerformProfileHaptics(GameObject)]: #PerformProfileHapticsGameObject
 [PerformProfileHaptics(InteractorFacade)]: #PerformProfileHapticsInteractorFacade
 [PerformProfileHaptics(XRNode)]: #PerformProfileHapticsXRNode
+[PerformProfileHapticsOnQueued()]: #PerformProfileHapticsOnQueued
