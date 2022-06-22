@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.0.20...v2.1.0) (2022-06-22)
+
+#### Features
+
+* **Facade:** add queued interactor option ([359b057](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/359b057bfda98bac3bac64e8924218f263eacf4a))
+  > The QueuedInteractor allows a pre-determined interactor to be stored on the haptics facade at an earlier time and then called at a later time without needing to know the absolute interactor facade at the point when the haptics are required.
+
 ### [2.0.20](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.0.19...v2.0.20) (2022-06-16)
 
 #### Miscellaneous Chores
