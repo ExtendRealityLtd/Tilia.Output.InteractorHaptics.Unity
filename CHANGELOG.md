@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.31](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.1.30...v2.1.31) (2023-03-21)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.camerarigs.trackedalias.unity ([296f387](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/commit/296f3874a6ee8a4e68d8e31064f1517579cd83a3))
+  > Bumps [io.extendreality.tilia.camerarigs.trackedalias.unity](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity) from 2.1.2 to 2.1.3. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.CameraRigs.TrackedAlias.Unity/compare/v2.1.2...v2.1.3)
+
 ### [2.1.30](https://github.com/ExtendRealityLtd/Tilia.Output.InteractorHaptics.Unity/compare/v2.1.29...v2.1.30) (2023-03-21)
 
 #### Miscellaneous Chores
